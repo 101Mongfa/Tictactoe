@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #333; /* Warna latar belakang abu-abu tua */
+  color: #fff; /* Warna teks putih */
+}
+
+#score-board {
+  margin-bottom: 20px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 200px;
+}
+
+td {
+  border: 2px solid #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.player {
+  font-weight: bold;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 5px;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid #fff; /* Warna garis putih */
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #555; /* Warna latar belakang abu-abu gelap */
+  transform: scale(1); /* Efek skala normal */
+  transition: background-color 0.3s, transform 0.3s, color 0.3s; /* Tambahkan transisi warna teks */
+}
+
+.cell:hover {
+  background-color: #777; /* Warna latar belakang abu-abu sedang saat dihover */
+}
+
+.cell.selected {
+  background-color: #4caf50; /* Warna latar belakang hijau saat dipilih */
+  color: #fff; /* Warna teks putih saat dipilih */
+  transform: scale(1.2); /* Efek skala saat dipilih */
+}
+
+.cell.winner {
+  background-color: #4caf50; /* Green color for winning cells */
+  color: #fff;
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
+#restart-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #4caf50; /* Warna tombol hijau */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#restart-button:hover {
+  background-color: #45a049; /* Warna tombol hijau saat dihover */
+}
+
+#winning-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#sound-control {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#toggle-sound-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #3498db; /* Blue color for play button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#pause-sound-button {
+  background-color: #e74c3c; /* Red color for pause button */
+}

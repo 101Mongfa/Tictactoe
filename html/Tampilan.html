@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Tic Tac Toe</title>
+  </head>
+  <body>
+    <table id="score-board">
+      <tr>
+        <td class="player">Pemain X:</td>
+        <td id="x-score">0</td>
+      </tr>
+      <tr>
+        <td class="player">Pemain O:</td>
+        <td id="o-score">0</td>
+      </tr>
+    </table>
+
+    <audio id="background-sound" loop>
+      <source src="music.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <div id="sound-control">
+      <button id="toggle-sound-button" onclick="toggleBackgroundSound()">Sound</button>
+    </div>
+
+    <div id="game-board">
+      <!-- Baris 1 -->
+      <div class="cell" onclick="placeMarker(this)"></div>
+      <div class="cell" onclick="placeMarker(this)"></div>
+      <div class="cell" onclick="placeMarker(this)"></div>
+
+      <!-- Baris 2 -->
+      <div class="cell" onclick="placeMarker(this)"></div>
+      <div class="cell" onclick="placeMarker(this)"></div>
+      <div class="cell" onclick="placeMarker(this)"></div>
+
+      <!-- Baris 3 -->
+      <div class="cell" onclick="placeMarker(this)"></div>
+      <div class="cell" onclick="placeMarker(this)"></div>
+      <div class="cell" onclick="placeMarker(this)"></div>
+    </div>
+    <div id="message">Pemain X giliran</div>
+    <button id="restart-button" onclick="restartGame()">Mulai Ulang</button>
+    <script src="Java/Logika.js"></script>
+  </body>
+</html>
